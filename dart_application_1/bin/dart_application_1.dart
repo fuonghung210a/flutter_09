@@ -1,5 +1,15 @@
-import 'package:dart_application_1/dart_application_1.dart' as dart_application_1;
+import 'dart:ffi';
 
-void main(List<String> arguments) {
-  print('Hello world: ${dart_application_1.calculate()}!');
+void main(List<String> args) {
+  String str =
+      " đây là kết quả của buổi học thứ 2 về dart: dart basics (phần 1)...";
+
+  /// hãy viết code bằng tất cả các cách có thể để in ra:
+  /// `Đây là kết quả buổi học thứ 2 về Dart: DART BASIC (phần 1)`
+  List<String> arr = str.trim().split(" ");
+  arr[0].replaceAll("đ", "Đ");
+
+  for (String str in arr) {
+    print(str);
+  }
 }
