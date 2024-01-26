@@ -13,6 +13,8 @@ void main(List<String> arguments) {
       .replaceFirst('dart basics', 'DART BASICS')
       .replaceAll('...', '');
   print(result);
+  result.replaceAll("");
+  result.replaceFirst(from, to);
 }
 
 extension StringExtension on String {
