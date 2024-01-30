@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 /// hãy viết code bằng tất cả các cách có thể để in ra:
 /// `Đây là kết quả buổi học thứ 2 về Dart: DART BASIC (ph ần 1)`
 /// gợi ý: sử dụng hàm subString()
@@ -15,12 +13,6 @@ void main(List<String> arguments) {
       .replaceFirst('dart basics', 'DART BASICS')
       .replaceAll('...', '');
   print(result);
-
-  late List<String> arr = ["asdasd", "Hello", "My friend"];
-  arr.add(result);
-  for (string in arr) {
-    print(string);
-  }
 }
 
 extension StringExtension on String {

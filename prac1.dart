@@ -1,50 +1,22 @@
-import 'dart:ffi';
+void main(List<String> args) {
+  String str =
+      " đây là kết quả của buổi học thứ 2 về dart: dart basics (phần 1)...";
+  String s1 = str.substring(1, str.length - 3);
+  s1 = Capitalize(s1);
+  s1 = s1
+      .replaceFirst("dart", "Dart")
+      .replaceFirst('dart basics', 'DART BASIC')
+      .replaceFirst(' của', '');
+  print(s1);
 
-void main() {
-  void workingWithString() {
-    String s = '''Hello world!''';
-
-    String s1 = 'Đây là đoạn văn được viết bằng tiếng việt';
-
-    String s2 = 'This is a sentence written in English';
-    List<String> str = s2.split(" ");
-
-    print(s2.replaceAll(
-        'i', 'Replace')); //rrturn a string without changing the source
-    print(s);
-  }
-
-  ;
-  testArray();
+  /// hãy viết code bằng tất cả các cách có thể để in ra:
+  /// `Đây là kết quả buổi học thứ 2 về Dart: DART BASIC (phần 1)`
+  /// gợi ý: sử dụng hàm subString()
 }
 
-void testArray() {
-  List strs = [
-    "a",
-    "b",
-    "c",
-    10,
-    20,
-    -1,
-    1.0,
-    true,
-    false,
-  ];
-  List<String> strs_1 = <String>["a", "adas", "d"];
-
-  List<String> subList = strs_1.sublist(0);
-  print(subList);
+String Capitalize(String st) {
+  if (st.isEmpty) {
+    return "";
+  } else
+    return st[0].toUpperCase() + st.substring(1);
 }
-
-void workingWithDouble() {
-  double? a = double.tryParse("99.a");
-  print(a);
-}
-
-void workingWithInteger() {
-  int a = -21;
-  int b = 221;
-
-  print(a + b);
-}
-// 
