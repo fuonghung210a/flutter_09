@@ -1,28 +1,14 @@
-/// hãy viết code bằng tất cả các cách có thể để in ra:
-/// `Đây là kết quả buổi học thứ 2 về Dart: DART BASIC (ph ần 1)`
-/// gợi ý: sử dụng hàm subString()
-void main(List<String> arguments) {
-  String string =
-      ' đây là kết quả của buổi học thứ 2 về dart: dart basics (phần 1)...';
+void main(List<String> args) {
+  int a = 10;
+  try {
+    a = int.parse("Hello world");
 
-  String result = string
-      .trim()
-      .vietHoaChuCaiDau()
-      .replaceFirst('của ', '')
-      .replaceFirst('dart', 'DART')
-      .replaceFirst('dart basics', 'DART BASICS')
-      .replaceAll('...', '');
-  print(result);
-}
-
-extension StringExtension on String {
-  String vietHoaChuCaiDau() {
-    if (isEmpty) {
-      return this;
-    } else {
-      return this[0].toUpperCase() +
-          substring(1)
-              .toLowerCase(); //viết hoa phần tử đầu, còn lại viết thường hết
-    }
-  } /*  */
+    /// khi parse int sẽ gây ra lỗi, nhưng được bọc bởi try catch
+    /// nên sẽ không thể print ra biến a
+    print("after parse, a = $a");
+  } on FormatException {
+    print("Format exception"); // exception -> FormatException: Hello world
+  } finally {
+    print("Task failed sucessfully");
+  }
 }
