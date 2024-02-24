@@ -31,7 +31,7 @@ void main() {
   flutter.addMissingMembers();
   android.addMissingMembers();
   ios.addMissingMembers();
-  web.addMissingMembers();
+  web.addMissingMembers(); //
   print(
       "Toan bo thanh vien cua lop Flutter: ${flutter.studentList.toString()}");
   print(
