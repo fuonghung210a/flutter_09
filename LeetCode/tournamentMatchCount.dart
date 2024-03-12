@@ -1,5 +1,5 @@
 void main() {
-  int n = 7;
+  int n = 7; //thay doi test case o day
   int res = 0;
   while (n > 1) {
     res += n ~/ 2;
