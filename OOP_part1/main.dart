@@ -15,10 +15,12 @@ void main() {
   Set<Student> iosClass = {d, e, f};
   Set<Student> webClass = {f};
 //khoi tao lop hoc:
-  Flutter flutter = Flutter("Flutter", 11, flutterClass);
-  Android android = Android("Android", 12, androidClass);
-  IOS ios = IOS("IOS", 13, iosClass);
-  Web web = Web("Web", 14, webClass);
+  Android android = Android("Android", 12, androidClass, 10);
+  IOS ios = IOS("IOS", 13, iosClass, 10);
+  Flutter flutter = Flutter("Flutter", 11, flutterClass, 10);
+
+  Web web = Web("Web", 14, webClass, 10);
+
   print(
       "So luong thanh vien con thieu cua lop Flutter: ${flutter.remainMembers()}");
   print(
@@ -39,9 +41,15 @@ void main() {
   print("Toan bo thanh vien cua lop Ios: ${ios.studentList.toString()}");
   print("Toan bo thanh vien cua lop web: ${web.studentList.toString()}");
 //build app:
-  flutter.buildAndroid(flutter);
-  flutter.buildDesktop(flutter);
-  flutter.buildIOS(flutter);
-  flutter.buildWeb(flutter);
-  ios.buildIOS(ios);
+  // flutter.buildAndroid(flutter);
+  // flutter.buildDesktop(flutter);
+  // flutter.buildIOS(flutter);
+  // flutter.buildWeb(flutter);
+  // ios.buildIOS(ios);
+  //
+  //android.updateRelatedClasses(20);
+  print(android.toString());
+  print(ios.toString());
+  print(web.toString());
+  print(flutter.toString());
 }

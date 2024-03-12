@@ -11,7 +11,22 @@ class Class {
   Set<Student> get studentList => _studentList;
   int _currentMember = 0;
   int get currentMember => _currentMember;
-  Class(this._className, this._maxMember, this._studentList);
+  int _numberOfLessons;
+  int get numberOfLessons => _numberOfLessons;
+  set numberOfLessons(int numberOfLessons) {
+    this._numberOfLessons = numberOfLessons;
+  }
+
+  Class(
+    this._className,
+    this._maxMember,
+    this._studentList,
+    this._numberOfLessons,
+  ) {
+    if (_numberOfLessons < 10) {
+      throw Exception('Number of lessons must be higher than 10');
+    }
+  }
 
   remainMembers() {
     _currentMember = _studentList.length;
@@ -33,6 +48,12 @@ class Class {
     final random = Random();
     final rdnCharCode = random.nextInt(26) + 65;
     return String.fromCharCode(rdnCharCode);
+  }
+
+  //
+  @override
+  String toString() {
+    return numberOfLessons.toString();
   }
 }
 
