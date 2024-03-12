@@ -1,12 +1,16 @@
-import 'dart:math';
-
-void main() {
-  int n = 231;
-  int curr = 0;
-  int res = (log(n) / log(4)).toInt();
-  if (pow(4, res) == n) {
-    print(true);
-  } else {
-    print(false);
-  }
-}
+// class Solution {
+//   bool isPowerOfFour(int n) {
+//     if (n <= 0) {
+//       return false;
+//     }
+//     if (n == 1) {
+//       return true;
+//     }
+//     int res = (log(n) / log(4)).toInt();
+//     if (pow(4, res) == n) {
+//       return true;
+//     } else {
+//       return false;
+//     }
+//   }
+// }
