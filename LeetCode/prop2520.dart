@@ -1,12 +1,13 @@
-void main() {
-  int n = 17;
-  int x = n;
-  int res = 0;
-  while (n >= 1) {
-    if (x % (n % 10) == 0) {
+class Solution {
+  int countDigits(int num) {
+    int x = num;
+    int res = 0;
+    while (num >= 1) {
+    if (x % (num % 10) == 0) {
       res++;
     }
-    n = n ~/ 10;
+    num = num ~/ 10;
+    }
+    return res;
   }
-  print(res);
 }
